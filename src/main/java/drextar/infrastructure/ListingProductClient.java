@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
 
-@FeignClient(name = "productListingClient", url = "https://itaudemo.vtexcommercestable.com.br")
+@FeignClient(name = "listingProductClient", url = "https://itaudemo.vtexcommercestable.com.br")
 public interface ListingProductClient {
 
     @GetMapping("/api/catalog_system/pvt/skuseller/{sellerId}/{skuId}")

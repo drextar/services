@@ -7,7 +7,7 @@ import java.util.List;
 
 @Getter
 @Setter
-public class ProductRequest {
+public class CreateProductRequest {
 
     private String productId;
     private String productName;
@@ -33,18 +33,24 @@ public class ProductRequest {
 
     // Getters and setters
 
+    @Getter
+    @Setter
     public static class Image {
         private String imageName;
         private String imageUrl;
         // Getters and setters
     }
 
+    @Getter
+    @Setter
     public static class ProductSpecification {
         private String fieldName;
         private List<String> fieldValues;
         // Getters and setters
     }
 
+    @Getter
+    @Setter
     public static class Pricing {
         private String currency;
         private double salePrice;
