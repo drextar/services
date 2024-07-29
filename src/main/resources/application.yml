@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: drextar
+  main:
+    allow-bean-definition-overriding: true
+  feign:
+    compression:
+      request:
+        enabled: true
+    client:
+      config:
+        default:
+          connectTimeout: 5000
+          readTimeout: 5000
+          loggerLevel: full
+          retryer:
+            period: 1000
+            maxPeriod: 5000
+            maxAttempts: 3

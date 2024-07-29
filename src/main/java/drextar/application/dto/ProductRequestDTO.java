@@ -7,7 +7,7 @@ import java.util.List;
 
 @Getter
 @Setter
-public class CreateProductRequest {
+public class ProductRequestDTO {
 
     private String productId;
     private String productName;
@@ -31,14 +31,16 @@ public class CreateProductRequest {
     private int availableQuantity;
     private Pricing pricing;
 
-    // Getters and setters
+    // Getters and Setters
+    // Nested classes for Image, ProductSpecification, and Pricing
 
     @Getter
     @Setter
     public static class Image {
         private String imageName;
         private String imageUrl;
-        // Getters and setters
+
+        // Getters and Setters
     }
 
     @Getter
@@ -46,7 +48,8 @@ public class CreateProductRequest {
     public static class ProductSpecification {
         private String fieldName;
         private List<String> fieldValues;
-        // Getters and setters
+
+        // Getters and Setters
     }
 
     @Getter
@@ -55,6 +58,7 @@ public class CreateProductRequest {
         private String currency;
         private double salePrice;
         private String currencySymbol;
-        // Getters and setters
+
+        // Getters and Setters
     }
 }

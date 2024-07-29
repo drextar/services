@@ -1,27 +1,27 @@
 package drextar.application.controller;
 
-import drextar.application.dto.CreateProductRequest;
-import drextar.application.service.CreateProductAppService;
-import org.springframework.http.ResponseEntity;
+import drextar.application.dto.ProductRequestDTO;
+import drextar.application.service.CreateProductService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
 
 @RestController
 @RequestMapping("/products")
 public class CreateProductController {
 
-    private final CreateProductAppService createProductAppService;
+    @Autowired
+    private CreateProductService createProductService;
 
-    public CreateProductController(CreateProductAppService createProductAppService) {
-        this.createProductAppService = createProductAppService;
-    }
-
-    @PutMapping("/{sellerId}/{productId}")
-    public ResponseEntity<Void> createProduct(
+    @PutMapping("/{accountName}/{sellerId}/{sellerSkuId}")
+    public void createProduct(
+            @PathVariable String accountName,
             @PathVariable String sellerId,
-            @PathVariable String productId,
-            @RequestBody CreateProductRequest createProductRequest
+            @PathVariable String sellerSkuId,
+            @RequestHeader("X-VTEX-API-AppKey") String appKey,
+            @RequestHeader("X-VTEX-API-AppToken") String appToken,
+            @RequestBody ProductRequestDTO productRequestDTO
     ) {
-        createProductAppService.createProduct(sellerId, productId, createProductRequest);
-        return ResponseEntity.ok().build();
+        createProductService.createProduct(accountName, sellerId, sellerSkuId, appKey, appToken, productRequestDTO);
     }
 }
