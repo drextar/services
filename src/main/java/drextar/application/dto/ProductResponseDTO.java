@@ -1,7 +1,13 @@
 package drextar.application.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.stereotype.Service;
+
 import java.time.LocalDateTime;
 
+@Getter
+@Setter
 public class ProductResponseDTO {
 
     private boolean isPersisted;
@@ -14,77 +20,4 @@ public class ProductResponseDTO {
     private LocalDateTime updateDate;
     private LocalDateTime requestedUpdateDate;
 
-    // Getters and Setters
-
-    public boolean isPersisted() {
-        return isPersisted;
-    }
-
-    public void setPersisted(boolean isPersisted) {
-        this.isPersisted = isPersisted;
-    }
-
-    public boolean isRemoved() {
-        return isRemoved;
-    }
-
-    public void setRemoved(boolean isRemoved) {
-        this.isRemoved = isRemoved;
-    }
-
-    public int getSkuSellerId() {
-        return skuSellerId;
-    }
-
-    public void setSkuSellerId(int skuSellerId) {
-        this.skuSellerId = skuSellerId;
-    }
-
-    public String getSellerId() {
-        return sellerId;
-    }
-
-    public void setSellerId(String sellerId) {
-        this.sellerId = sellerId;
-    }
-
-    public int getStockKeepingUnitId() {
-        return stockKeepingUnitId;
-    }
-
-    public void setStockKeepingUnitId(int stockKeepingUnitId) {
-        this.stockKeepingUnitId = stockKeepingUnitId;
-    }
-
-    public String getSellerStockKeepingUnitId() {
-        return sellerStockKeepingUnitId;
-    }
-
-    public void setSellerStockKeepingUnitId(String sellerStockKeepingUnitId) {
-        this.sellerStockKeepingUnitId = sellerStockKeepingUnitId;
-    }
-
-    public boolean isActive() {
-        return isActive;
-    }
-
-    public void setActive(boolean isActive) {
-        this.isActive = isActive;
-    }
-
-    public LocalDateTime getUpdateDate() {
-        return updateDate;
-    }
-
-    public void setUpdateDate(LocalDateTime updateDate) {
-        this.updateDate = updateDate;
-    }
-
-    public LocalDateTime getRequestedUpdateDate() {
-        return requestedUpdateDate;
-    }
-
-    public void setRequestedUpdateDate(LocalDateTime requestedUpdateDate) {
-        this.requestedUpdateDate = requestedUpdateDate;
-    }
 }
