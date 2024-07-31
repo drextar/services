@@ -7,7 +7,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
+@Setter
 @AllArgsConstructor
+@NoArgsConstructor
 public class Image {
     @NotBlank(message = "imageName não pode ser vazio ou nulo")
     private String imageName;

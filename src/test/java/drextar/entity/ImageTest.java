@@ -63,13 +63,36 @@ public class ImageTest {
     }
 
     @Test
-    void testGetters() {
-        Image image = new Image("Produto Principal", "http://exemplo.com/imagem.jpg");
+    void testGettersAndSetters() {
+        // Criando uma instância da classe Image
+        Image image = new Image();
 
-        // Testando getter para imageName
-        assertEquals("Produto Principal", image.getImageName());
+        // Testando o setter e getter para imageName
+        image.setImageName("Imagem Principal");
+        assertEquals("Imagem Principal", image.getImageName());
 
-        // Testando getter para imageUrl
+        // Testando o setter e getter para imageUrl
+        image.setImageUrl("http://exemplo.com/imagem.jpg");
         assertEquals("http://exemplo.com/imagem.jpg", image.getImageUrl());
+    }
+
+    @Test
+    void testAllArgsConstructor() {
+        // Criando uma instância usando o construtor com argumentos
+        Image image = new Image("Imagem Principal", "http://exemplo.com/imagem.jpg");
+
+        // Verificando se os valores estão corretamente atribuídos
+        assertEquals("Imagem Principal", image.getImageName());
+        assertEquals("http://exemplo.com/imagem.jpg", image.getImageUrl());
+    }
+
+    @Test
+    void testNoArgsConstructor() {
+        // Criando uma instância usando o construtor sem argumentos
+        Image image = new Image();
+
+        // Verificando se os valores estão nulos inicialmente
+        assertEquals(null, image.getImageName());
+        assertEquals(null, image.getImageUrl());
     }
 }
