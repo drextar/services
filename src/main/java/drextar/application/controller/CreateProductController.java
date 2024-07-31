@@ -1,6 +1,6 @@
 package drextar.application.controller;
 
-import drextar.application.dto.ProductRequestDTO;
+import drextar.application.dto.request.ProductRequestDTO;
 import drextar.application.service.CreateProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
