@@ -1,7 +1,7 @@
 package drextar.infrastructure.feign;
 
 import drextar.application.config.FeignConfig;
-import drextar.application.dto.request.ProductRequestDTO;
+import drextar.application.dto.request.createProduct.ProductRequestDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
