@@ -1,4 +1,4 @@
-package drextar.application.dto.request;
+package drextar.application.dto.request.createProduct;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;

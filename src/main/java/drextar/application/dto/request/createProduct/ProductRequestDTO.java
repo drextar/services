@@ -1,4 +1,4 @@
-package drextar.application.dto.request;
+package drextar.application.dto.request.createProduct;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
@@ -13,6 +13,7 @@ import java.util.List;
 @Getter
 @Setter
 public class ProductRequestDTO {
+
 
     @NotBlank(message = "ProductName não pode ser vazio ou nulo")
     private String productName;

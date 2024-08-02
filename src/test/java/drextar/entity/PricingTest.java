@@ -1,6 +1,6 @@
 package drextar.entity;
 
-import drextar.application.dto.request.Pricing;
+import drextar.application.dto.request.createProduct.Pricing;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;

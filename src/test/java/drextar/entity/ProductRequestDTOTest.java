@@ -181,7 +181,7 @@ package drextar.entity;
 //    }
 //}
 
-import drextar.application.dto.request.*;
+import drextar.application.dto.request.createProduct.*;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;

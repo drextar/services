@@ -1,4 +1,4 @@
-package drextar.application.dto.request;
+package drextar.application.dto.request.createProduct;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -14,8 +14,7 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class SkuSpecification {
-
+public class ProductSpecification {
     @NotBlank(message = "fieldName não pode ser vazio ou nulo")
     private String fieldName;
 

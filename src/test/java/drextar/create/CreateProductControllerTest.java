@@ -1,7 +1,7 @@
 package drextar.create;
 
 import drextar.application.controller.CreateProductController;
-import drextar.application.dto.request.ProductRequestDTO;
+import drextar.application.dto.request.createProduct.ProductRequestDTO;
 import drextar.application.service.CreateProductService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

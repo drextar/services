@@ -1,6 +1,6 @@
 package drextar.entity;
 
-import drextar.application.dto.request.SkuSpecification;
+import drextar.application.dto.request.createProduct.SkuSpecification;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;
