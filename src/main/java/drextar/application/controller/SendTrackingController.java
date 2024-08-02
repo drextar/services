@@ -2,6 +2,7 @@ package drextar.application.controller;
 
 import drextar.application.dto.request.sendTracking.SendTrackingRequestDTO;
 import drextar.application.service.SendTrackingService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +19,7 @@ public class SendTrackingController {
             @PathVariable String invoiceNumber,
             @RequestHeader("X-VTEX-API-AppKey") String appKey,
             @RequestHeader("X-VTEX-API-AppToken") String appToken,
-            @RequestBody SendTrackingRequestDTO sendTrackingRequestDTO
+            @Valid @RequestBody SendTrackingRequestDTO sendTrackingRequestDTO
     ) {
         sendTrackingService.sendTracking(marketplaceOrderId, invoiceNumber, appKey, appToken, sendTrackingRequestDTO);
     }

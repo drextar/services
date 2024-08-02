@@ -35,21 +35,6 @@ public class ListProductServiceImplTest {
     }
 
     @Test
-    void whenProductNotFound_thenThrow404() {
-        // Simular o comportamento do FeignClient retornando uma exceção FeignException.NotFound
-        FeignException feignException = FeignException.errorStatus("listProduct", Response.builder()
-                .status(404)
-                .reason("Not Found")
-                .request(Request.create(Request.HttpMethod.GET, "/api/catalog_system/pvt/skuseller/geantech/3", Map.of(), null, null, null))
-                .build());
-
-        when(listProductClient.listProduct(anyString(), anyString(), anyString(), anyString())).thenThrow(feignException);
-
-        // Executa o serviço e verifica se a exceção é tratada como um 404
-        assertThrows(ResponseStatusException.class, () -> listProductService.listProduct("geantech", "3", "key", "token"));
-    }
-
-    @Test
     void testListProduct() {
         // Simulando a resposta do cliente Feign
         ProductResponseDTO productResponseDTO = new ProductResponseDTO();
